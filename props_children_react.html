@@ -13,17 +13,13 @@
     <script type="text/babel">
 
         function Name(props){
-            return (
-                <h2>{props.children}</h2>
-            );
+            return <h2>{props.firstName} {props.lastName} ({props.children})</h2>;
         }
 
         ReactDOM.render(
             <div>
-                <Name>David</Name>
-                <Name>Ahn</Name>
-                <Name>Peter</Name>
-                <Name>Parker</Name>
+                <Name firstName="David" lastName="Ahn">Los Angeles</Name>
+                <Name firstName="Peter" lastName="Parker">New York</Name>
             </div>, 
             document.getElementById('root'));
     </script>
